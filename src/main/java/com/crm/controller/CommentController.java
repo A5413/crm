@@ -22,6 +22,8 @@ public class CommentController {
             @RequestBody Comment comment,
             @RequestParam Long postId
             ){
+        System.out.println(1000);
+        System.out.println(1000);
         Post post = postRepository.findById(postId).get();
         comment.setPost(post);
         commentRepository.save(comment);
